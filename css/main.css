@@ -325,7 +325,7 @@ textarea:invalid {
 }
 
 .start__bottom {
-  margin-top: auto;
+  margin-top: 10px;
 }
 
 .start__bottom-text {

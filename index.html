@@ -97,6 +97,38 @@
         }
     });
 
+    // Добавление активного :checkbox
+
+document.addEventListener('DOMContentLoaded', function() {
+    const questionsItems = document.querySelectorAll('.questions__item');
+
+    questionsItems.forEach(item => {
+        const checkbox = item.querySelector('.questions__item-check');
+        const label = item.querySelector('.questions__item-text');
+
+        // Функция для переключения класса
+        function toggleActiveClass() {
+            // Убираем класс у всех элементов
+            questionsItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    const otherCheckbox = otherItem.querySelector('.questions__item-check');
+                    otherCheckbox.checked = false; // Снимаем отметку с других чекбоксов
+                    otherItem.classList.remove('questions__item-active'); // Удаляем класс активного состояния
+                }
+            });
+
+            // Переключаем класс для текущего элемента
+            item.classList.toggle('questions__item-active', checkbox.checked);
+        }
+
+        // Добавляем обработчики событий на чекбокс и метку
+        checkbox.addEventListener('change', toggleActiveClass); // Используем 'change' для чекбокса
+        label.addEventListener('click', toggleActiveClass); // 'click' для метки
+    });
+});
+
+// Добавление активного :checkbox
+
     document.addEventListener('DOMContentLoaded', () => {
             const checkboxes = document.querySelectorAll('#questionsForm input[type="checkbox"]');
             const submitBtn = document.getElementById('submitBtn');
