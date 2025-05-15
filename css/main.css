@@ -60,7 +60,6 @@
 }
 
 body, html {
-  height: 100%;
   background: linear-gradient(to bottom, #5EEDC8 0%, #368772 50%, #368772 100%);
 }
 
@@ -94,6 +93,10 @@ section {
 
 .first-screen {
   display: flex;
+}
+
+.eighth-screen {
+  background: linear-gradient(to bottom, #5EEDC8 0%, #368772 50%, #368772 100%);
 }
 
 .btn {
@@ -242,7 +245,6 @@ textarea:invalid {
   }
 }
 .start {
-  height: 100%;
   background: unset;
 }
 
