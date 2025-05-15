@@ -65,6 +65,7 @@ html {
 
 body, html {
   background: linear-gradient(to bottom, #5EEDC8 0%, #368772 50%, #368772 100%);
+  overflow-x: hidden;
 }
 
 .container {
