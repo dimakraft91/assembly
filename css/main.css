@@ -59,6 +59,10 @@
   --third-family: "Kohinoor Devanagari", sans-serif;
 }
 
+html {
+  height: 100%;
+}
+
 body, html {
   background: linear-gradient(to bottom, #5EEDC8 0%, #368772 50%, #368772 100%);
 }
