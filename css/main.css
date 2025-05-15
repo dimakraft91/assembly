@@ -110,6 +110,7 @@ section {
 
 .questionsformeight .eighth-screen__btn {
   margin-top: 5px;
+  color: #FFBF00;
 }
 
 
@@ -327,6 +328,7 @@ textarea:invalid {
 }
 
 .start__bottom {
+  margin-top: 315px;
   margin: 10px 0;
 }
 
