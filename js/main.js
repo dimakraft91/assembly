@@ -482,4 +482,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// popup окно
+// popup окноd
