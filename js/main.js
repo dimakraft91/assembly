@@ -306,40 +306,32 @@ document.getElementById('saveBtnEighth').addEventListener('click', function() {
 
 // скрипт для проверки ввода 12 символов и переключение между экранами
 
-        // Обработчик события для кнопки по классу
-        document.querySelector('.start__body-btn').addEventListener('click', function() {
-            // Скрываем секцию вопросов
-            document.querySelector('.first-screen').style.display = 'none';
+    //     // Обработчик события для кнопки по классу
+    //     document.querySelector('.start__body-btn').addEventListener('click', function() {
+    //         // Скрываем секцию вопросов
+    //         document.querySelector('.first-screen').style.display = 'none';
             
-            // Показываем секцию детального вопроса
-            document.querySelector('.questionnaire__wrap').style.display = 'flex';
-            document.querySelector('.second-screen').style.display = 'flex';
-        });
-        // Обработчик события для кнопки по классу
-        document.querySelector('.second-screen__btn').addEventListener('click', function() {
-            // Скрываем секцию вопросов
-            document.querySelector('.second-screen').style.display = 'none';
-            
-            // Показываем секцию детального вопроса
-            document.querySelector('.third-screen').style.display = 'flex';
-        });
+    //         // Показываем секцию детального вопроса
+    //         document.querySelector('.questionnaire__wrap').style.display = 'flex';
+    //         document.querySelector('.second-screen').style.display = 'flex';
+    //     });
 
-        document.getElementById('submitBtn').addEventListener('click', function() {
-        // Получаем все чекбоксы внутри формы
-        const checkboxes = document.querySelectorAll('#questionsForm input[type="checkbox"]');
-        // Проверяем, есть ли выбранные чекбоксы
-        const isAnyChecked = Array.from(checkboxes).some(cb => cb.checked);
+    //     document.getElementById('submitBtn').addEventListener('click', function() {
+    //     // Получаем все чекбоксы внутри формы
+    //     const checkboxes = document.querySelectorAll('#questionsForm input[type="checkbox"]');
+    //     // Проверяем, есть ли выбранные чекбоксы
+    //     const isAnyChecked = Array.from(checkboxes).some(cb => cb.checked);
         
-        if (isAnyChecked) {
-            // Есть выбранные — показываем третью секцию
-            document.querySelector('.second-screen').style.display = 'none';
-            document.querySelector('.third-screen').style.display = 'flex';
-        } else {
-            // Нет выбранных — показываем вторую секцию
-            document.querySelector('.second-screen').style.display = 'flex';
-            document.querySelector('.third-screen').style.display = 'none';
-        }
-    });
+    //     if (isAnyChecked) {
+    //         // Есть выбранные — показываем третью секцию
+    //         document.querySelector('.second-screen').style.display = 'none';
+    //         document.querySelector('.third-screen').style.display = 'flex';
+    //     } else {
+    //         // Нет выбранных — показываем вторую секцию
+    //         document.querySelector('.second-screen').style.display = 'flex';
+    //         document.querySelector('.third-screen').style.display = 'none';
+    //     }
+    // });
 
         document.querySelector('.third-screen__btn').addEventListener('click', function() {
         // Получаем значение из поля detailed-question__field

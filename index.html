@@ -4,6 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/main.css">
+    <script defer>
+        // Обработчик события для кнопки по классу
+        document.querySelector('.start__body-btn').addEventListener('click', function() {
+            // Скрываем секцию вопросов
+            document.querySelector('.first-screen').style.display = 'none';
+            
+            // Показываем секцию детального вопроса
+            document.querySelector('.questionnaire__wrap').style.display = 'flex';
+            document.querySelector('.second-screen').style.display = 'flex';
+        });
+
+        document.getElementById('submitBtn').addEventListener('click', function() {
+        // Получаем все чекбоксы внутри формы
+        const checkboxes = document.querySelectorAll('#questionsForm input[type="checkbox"]');
+        // Проверяем, есть ли выбранные чекбоксы
+        const isAnyChecked = Array.from(checkboxes).some(cb => cb.checked);
+        
+        if (isAnyChecked) {
+            // Есть выбранные — показываем третью секцию
+            document.querySelector('.second-screen').style.display = 'none';
+            document.querySelector('.third-screen').style.display = 'flex';
+        } else {
+            // Нет выбранных — показываем вторую секцию
+            document.querySelector('.second-screen').style.display = 'flex';
+            document.querySelector('.third-screen').style.display = 'none';
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('#questionsForm input[type="checkbox"]');
+            const submitBtn = document.getElementById('submitBtn');
+        
+            // Функция для обновления класса у кнопки
+            function updateButtonClass() {
+                const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
+                if (anyChecked) {
+                    if (!submitBtn.classList.contains('second-screen__btn-check')) {
+                        submitBtn.classList.add('second-screen__btn-check');
+                        attachClickHandler(); // навешиваем обработчик при добавлении класса
+                    }
+                } else {
+                    if (submitBtn.classList.contains('second-screen__btn-check')) {
+                        submitBtn.classList.remove('second-screen__btn-check');
+                        detachClickHandler(); // при необходимости — убрать обработчик
+                    }
+                }
+            }
+        
+            // Обработчик для чекбоксов
+            checkboxes.forEach(cb => {
+                cb.addEventListener('change', updateButtonClass);
+            });
+        
+            // Переменная для хранения функции-обработчика клика
+            let progressBarHandler = null;
+        
+            // Функция для навешивания обработчика на кнопку
+            function attachClickHandler() {
+                if (!progressBarHandler) {
+                    progressBarHandler = () => {
+                        updateProgressBar();
+                    };
+                    submitBtn.addEventListener('click', progressBarHandler);
+                }
+            }
+        
+            // Функция для удаления обработчика (если нужно)
+            function detachClickHandler() {
+                if (progressBarHandler) {
+                    submitBtn.removeEventListener('click', progressBarHandler);
+                    progressBarHandler = null;
+                }
+            }
+        
+            // Изначально проверяем состояние чекбоксов
+            updateButtonClass();
+        
+            // Объявляем функцию обновления прогресс-бара
+            const progressBarItems = document.querySelectorAll('.progress-bar__item');
+            let currentIndex = 0;
+        
+            function updateProgressBar() {
+                if (currentIndex < progressBarItems.length) {
+                    // Убираем активный класс у текущего элемента и добавляем passed
+                    progressBarItems[currentIndex].classList.remove('progress-bar__item-active');
+                    progressBarItems[currentIndex].classList.add('progress-bar__item-passed');
+        
+                    // Обновляем stage внутри элемента
+                    const stageElement = progressBarItems[currentIndex].querySelector('.progress-bar__item-stage');
+                    if (stageElement) {
+                        stageElement.classList.remove('progress-bar__item-stage');
+                        stageElement.classList.add('progress-bar__item-stage_active');
+                    }
+        
+                    currentIndex++;
+        
+                    // Активируем следующий элемент, если он есть
+                    if (currentIndex < progressBarItems.length) {
+                        progressBarItems[currentIndex].classList.add('progress-bar__item-active');
+                    }
+                }
+            }
+        });
+
+    </script>
     <title>संक्षिप्त सर्वेक्षण पूरा करें और कुल $346 मूल्य के 3 बोनस सुनिश्चित रूप से प्राप्त करें, साथ ही 3 नई Toyota Camry XSE कारों के लकी ड्रा में स्वचालित रूप से भाग लें।</title>    
 </head>
 <body>
@@ -224,7 +329,7 @@
 
     <script src="js/main.js" async></script>
 
-    <script async>
+    <!-- <script async>
         document.addEventListener('DOMContentLoaded', () => {
             const checkboxes = document.querySelectorAll('#questionsForm input[type="checkbox"]');
             const submitBtn = document.getElementById('submitBtn');
@@ -300,7 +405,7 @@
                 }
             }
         });
-    </script>
+    </script> -->
 
     <script async>
     document.addEventListener('DOMContentLoaded', () => {
