@@ -82,6 +82,7 @@ section {
   display: flex;
   justify-content: center;
   display: none;
+  margin-bottom: 15px;
 }
 
 .questionnaire__wrap {
@@ -274,10 +275,11 @@ textarea:invalid {
 
 .start__logo {
   margin-top: 13px;
+  max-width: 267px;
 }
 
 .start__logo-img {
-  max-width: 267px;
+  width: 100%;
 }
 
 .start__body {
