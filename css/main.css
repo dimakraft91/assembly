@@ -100,7 +100,7 @@ section {
 }
 
 .eighth-screen {
-  background: linear-gradient(to bottom, #5EEDC8 0%, #368772 50%, #368772 100%);
+  margin-bottom: 15px;
 }
 
 .eighth-screen .detailed-question__container {
@@ -325,7 +325,7 @@ textarea:invalid {
 }
 
 .start__bottom {
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .start__bottom-text {

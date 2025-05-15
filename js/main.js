@@ -416,38 +416,38 @@ document.getElementById('saveBtnEighth').addEventListener('click', function() {
 
 // скрипт для проверки ввода 12 символов и переключение между экранами
 
-// popup окно
+// // popup окно
 
-document.addEventListener('DOMContentLoaded', function() {
-    const btn = document.querySelector('.thanks__bottom-btn');
-    const popup = document.getElementById('popup');
-    const emailInput = document.querySelector('.thanks__bottom-mail');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const btn = document.querySelector('.thanks__bottom-btn');
+//     const popup = document.getElementById('popup');
+//     const emailInput = document.querySelector('.thanks__bottom-mail');
 
-    // Функция для проверки заполненности поля
-    function isEmailFilled() {
-        return emailInput && emailInput.value.trim() !== '';
-    }
+//     // Функция для проверки заполненности поля
+//     function isEmailFilled() {
+//         return emailInput && emailInput.value.trim() !== '';
+//     }
 
-    // Обработчик клика по кнопке
-    btn.addEventListener('click', function() {
-        if (isEmailFilled()) {
-            // Если поле заполнено, показываем popup
-            popup.style.display = 'flex';
-        } else {
-            // Если поле пустое, ничего не делаем или можно показать сообщение
-            // например, alert('Пожалуйста, введите ваш email');
+//     // Обработчик клика по кнопке
+//     btn.addEventListener('click', function() {
+//         if (isEmailFilled()) {
+//             // Если поле заполнено, показываем popup
+//             popup.style.display = 'flex';
+//         } else {
+//             // Если поле пустое, ничего не делаем или можно показать сообщение
+//             // например, alert('Пожалуйста, введите ваш email');
             
-        }
-    });
+//         }
+//     });
 
-    // Закрытие popup при клике на крестик
+//     // Закрытие popup при клике на крестик
 
-    // Закрытие popup при клике вне окна
-    popup.addEventListener('click', function(e) {
-        if (e.target === popup) {
-            popup.style.display = 'none';
-        }
-    });
-});
+//     // Закрытие popup при клике вне окна
+//     popup.addEventListener('click', function(e) {
+//         if (e.target === popup) {
+//             popup.style.display = 'none';
+//         }
+//     });
+// });
 
-// popup окноd
+// // popup окно
