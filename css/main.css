@@ -441,7 +441,7 @@ textarea:invalid {
 .detailed-question__field::-webkit-input-placeholder { /* WebKit browsers */
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.01em;
   color: #0f1322;
@@ -450,7 +450,7 @@ textarea:invalid {
 .detailed-question__field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.01em;
   color: #0f1322;
@@ -459,7 +459,7 @@ textarea:invalid {
 .detailed-question__field::-moz-placeholder { /* Mozilla Firefox 19+ */
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.01em;
   color: #0f1322;
@@ -468,7 +468,7 @@ textarea:invalid {
 .detailed-question__field:-ms-input-placeholder { /* Internet Explorer 10+ */
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.01em;
   color: #0f1322;
@@ -751,42 +751,6 @@ textarea:invalid {
   border-radius: 8px;
   padding: 11px 10px 11px 10px;
   flex: 1;
-}
-
-::-webkit-input-placeholder { /* WebKit browsers */
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 8px;
-  line-height: 150%;
-  letter-spacing: -0.01em;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 8px;
-  line-height: 150%;
-  letter-spacing: -0.01em;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 8px;
-  line-height: 150%;
-  letter-spacing: -0.01em;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 8px;
-  line-height: 150%;
-  letter-spacing: -0.01em;
-  color: rgba(0, 0, 0, 0.5);
 }
 
 .thanks__bottom-btn {
